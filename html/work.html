@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人作品集 - 作品展示</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/work.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- 头部导航 -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">MY PORTFOLIO</div>
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/html/index.html">首页</a></li>
+        <li><a href="/html/about.html">关于我</a></li>
+        <li><a href="/html/work.html" class="active">作品展示</a></li>
+        <li><a href="/html/contact.html">联系方式</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 作品展示主体 -->
+  <section class="works">
+    <div class="container">
+      <h2 class="section-title">我的作品</h2>
+      
+      <!-- 作品筛选 -->
+      <div class="work-filter">
+        <button class="filter-btn active" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="web">网页设计</button>
+        <button class="filter-btn" data-filter="ui">UI设计</button>
+        <button class="filter-btn" data-filter="other">其他</button>
+      </div>
+      
+      <!-- 作品网格 -->
+      <div class="works-grid">
+        <div class="work-item" data-category="web">
+          <img src="/images/1.png" alt="企业官网设计" loading="lazy">
+          <div class="work-overlay">
+            <h3>企业官网设计</h3>
+            <p>为科技公司打造的响应式官网，包含首页、产品页、关于页等</p>
+            <a href="#" class="btn btn-sm">查看详情</a>
+          </div>
+        </div>
+        <div class="work-item" data-category="web">
+          <img src="/images/2.png" alt="电商页面重构" loading="lazy">
+          <div class="work-overlay">
+            <h3>电商页面重构</h3>
+            <p>优化电商平台的用户体验，提升页面加载速度30%</p>
+            <a href="#" class="btn btn-sm">查看详情</a>
+          </div>
+        </div>
+        <div class="work-item" data-category="ui">
+          <img src="/images/3.png" alt="移动端APP界面" loading="lazy">
+          <div class="work-overlay">
+            <h3>移动端APP界面</h3>
+            <p>出行类APP的UI设计，包含首页、订单页、个人中心等</p>
+            <a href="#" class="btn btn-sm">查看详情</a>
+          </div>
+        </div>
+        <div class="work-item" data-category="ui">
+          <img src="/images/4.png" alt="小程序界面设计" loading="lazy">
+          <div class="work-overlay">
+            <h3>小程序界面设计</h3>
+            <p>餐饮类小程序的界面设计，注重操作便捷性</p>
+            <a href="#" class="btn btn-sm">查看详情</a>
+          </div>
+        </div>
+        <div class="work-item" data-category="other">
+          <img src="/images/5.png" alt="海报设计" loading="lazy">
+          <div class="work-overlay">
+            <h3>海报设计</h3>
+            <p>品牌推广海报设计，结合视觉设计与品牌调性</p>
+            <a href="#" class="btn btn-sm">查看详情</a>
+          </div>
+        </div>
+        <div class="work-item" data-category="other">
+          <img src="/images/6.png" alt="LOGO设计" loading="lazy">
+          <div class="work-overlay">
+            <h3>LOGO设计</h3>
+            <p>为初创公司设计的品牌LOGO，简洁易记</p>
+            <a href="#" class="btn btn-sm">查看详情</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-col">
+        <h3>关于我</h3>
+        <p>一名热爱前端设计的学习者，专注于打造优质的网页体验</p>
+      </div>
+      <div class="footer-col">
+        <h3>快速链接</h3>
+        <ul>
+          <li><a href="/html/index.html">首页</a></li>
+          <li><a href="/html/about.html">关于我</a></li>
+          <li><a href="/html/work.html">作品展示</a></li>
+          <li><a href="/html/contact.html">联系方式</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>联系方式</h3>
+        <p><i class="fas fa-envelope"></i> example@163.com</p>
+        <p><i class="fas fa-phone"></i> 138-XXXX-XXXX</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 个人作品集 版权所有</p>
+    </div>
+  </footer>
+
+  <script>
+    // 移动端菜单切换
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    menuToggle.addEventListener('click', () => {
+      navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    // 作品筛选功能
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const workItems = document.querySelectorAll('.work-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // 移除所有按钮的active类
+        filterBtns.forEach(b => b.classList.remove('active'));
+        // 给当前按钮添加active类
+        btn.classList.add('active');
+        
+        const filterValue = btn.getAttribute('data-filter');
+        
+        // 筛选作品
+        workItems.forEach(item => {
+          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            item.style.display = 'block';
+            // 添加淡入动画
+            setTimeout(() => {
+              item.style.opacity = '1';
+            }, 100);
+          } else {
+            item.style.opacity = '0';
+            setTimeout(() => {
+              item.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

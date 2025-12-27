@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人作品集 - 关于我</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- 头部导航 -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">MY PORTFOLIO</div>
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/html/index.html">首页</a></li>
+        <li><a href="/html/about.html" class="active">关于我</a></li>
+        <li><a href="/html/work.html">作品展示</a></li>
+        <li><a href="/html/contact.html">联系方式</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 关于我主体内容 -->
+  <section class="about">
+    <div class="container">
+      <h2 class="section-title">关于我</h2>
+      <div class="about-container">
+        <div class="about-img">
+          <img src="/images/1.png" alt="个人头像" loading="lazy">
+        </div>
+        <div class="about-text">
+          <h3>我是谁</h3>
+          <p>大家好！我是一名网页设计专业的学生，热爱前端开发与视觉设计，拥有扎实的HTML/CSS/JavaScript基础，熟悉响应式设计与UI/UX设计原则。</p>
+          <p>我始终相信，好的网页不仅要有美观的视觉表现，更要注重用户体验与功能性。在学习过程中，我完成了多个实战项目，积累了丰富的实践经验。</p>
+          
+          <h3 class="mt-30">技能专长</h3>
+          <div class="skills">
+            <div class="skill-item">
+              <span>HTML5/CSS3</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%;"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span>JavaScript</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 75%;"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span>响应式设计</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%;"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span>UI设计</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-col">
+        <h3>关于我</h3>
+        <p>一名热爱前端设计的学习者，专注于打造优质的网页体验</p>
+      </div>
+      <div class="footer-col">
+        <h3>快速链接</h3>
+        <ul>
+          <li><a href="/html/index.html">首页</a></li>
+          <li><a href="/html/about.html">关于我</a></li>
+          <li><a href="/html/work.html">作品展示</a></li>
+          <li><a href="/html/contact.html">联系方式</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>联系方式</h3>
+        <p><i class="fas fa-envelope"></i> example@163.com</p>
+        <p><i class="fas fa-phone"></i> 138-XXXX-XXXX</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 个人作品集 版权所有</p>
+    </div>
+  </footer>
+
+  <script>
+    // 移动端菜单切换
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    menuToggle.addEventListener('click', () => {
+      navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+    });
+  </script>
+</body>
+</html>
