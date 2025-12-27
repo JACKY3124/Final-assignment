@@ -1,0 +1,140 @@
+.contact {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--white);
+}
+
+.contact-container {
+  display: flex;
+  gap: var(--spacing-xxl);
+  align-items: flex-start;
+}
+
+/* 联系信息重构 */
+.contact-info {
+  flex: 1;
+  background-color: var(--gray-100);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--gray-300);
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-top: 2px;
+  background-color: rgba(74, 144, 226, 0.1);
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 50%;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.contact-item p {
+  color: var(--gray-600);
+  font-size: 14px;
+}
+
+.social-links {
+  margin-top: var(--spacing-xl);
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: var(--white);
+  color: var(--primary);
+  border-radius: 50%;
+  margin-right: var(--spacing-sm);
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.social-links a:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  transform: translateY(-5px) rotate(10deg);
+}
+
+/* 联系表单重构 */
+.contact-form {
+  flex: 1.5;
+  background-color: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+  color: var(--gray-800);
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  transition: var(--transition);
+  background-color: var(--gray-100);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: var(--white);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 180px;
+  line-height: 1.6;
+}
+
+/* 响应式优化 */
+@media (max-width: 992px) {
+  .contact-container {
+    gap: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  
+  .contact-info, .contact-form {
+    padding: var(--spacing-md);
+  }
+  
+  .form-group textarea {
+    min-height: 140px;
+  }
+}
